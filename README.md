@@ -1,7 +1,21 @@
 # typescript-react-rating-stars
 
+## Run
+
 ```
 npm start
+```
+
+## Build
+
+```
+npm run build
+```
+
+## Testing
+
+```
+npm test
 ```
 
 ## Install Memo

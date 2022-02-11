@@ -1,19 +1,31 @@
 import Star from './Star'
 
 const StarRating = ({
-  index,
+  size = 5,
   rating,
   handleClick,
 }: {
-  index: number
+  size: number
   rating: number
-  handleClick: () => void
+  handleClick: (index: number) => void
 }) => {
-  const style = rating > index ? 'red' : 'grey'
-
   return (
     <>
-      <Star style={style} handleClick={() => handleClick()} />
+      {[...Array(size)].map((_, index) =>
+        rating > index ? (
+          <Star
+            key={index}
+            style={'red'}
+            handleClick={() => handleClick(index)}
+          />
+        ) : (
+          <Star
+            key={index}
+            style={'grey'}
+            handleClick={() => handleClick(index)}
+          />
+        )
+      )}
     </>
   )
 }

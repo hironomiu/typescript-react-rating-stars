@@ -28,34 +28,25 @@ const App = () => {
         <div key={data.id}>
           <h1>{data.shopName}</h1>
           <div>
-            {[...Array(5)].map((_, index) => (
-              <StarRating
-                key={index}
-                index={index}
-                rating={data.totalRating}
-                handleClick={() => handleClick(dataIndex, 0, index)}
-              />
-            ))}
+            <StarRating
+              size={5}
+              rating={data.totalRating}
+              handleClick={(index) => handleClick(dataIndex, 0, index)}
+            />
           </div>
           <div>
-            {[...Array(5)].map((_, index) => (
-              <StarRating
-                key={index}
-                index={index}
-                rating={data.soupRating}
-                handleClick={() => handleClick(dataIndex, 1, index)}
-              />
-            ))}
+            <StarRating
+              size={5}
+              rating={data.soupRating}
+              handleClick={(index) => handleClick(dataIndex, 1, index)}
+            />
           </div>
           <div>
-            {[...Array(5)].map((_, index) => (
-              <StarRating
-                key={index}
-                index={index}
-                rating={data.noodleRating}
-                handleClick={() => handleClick(dataIndex, 2, index)}
-              />
-            ))}
+            <StarRating
+              size={5}
+              rating={data.noodleRating}
+              handleClick={(index) => handleClick(dataIndex, 2, index)}
+            />
           </div>
         </div>
       ))}
