@@ -42,5 +42,13 @@ export const useApp = () => {
     [rating, setRating]
   )
 
-  return { rating, setRating, handleClick, addShop }
+  const deleteShop = useCallback(
+    (id: number) => {
+      const filtered = rating.filter((data) => data.id !== id)
+      setRating([...filtered])
+    },
+    [rating, setRating]
+  )
+
+  return { rating, setRating, handleClick, addShop, deleteShop }
 }

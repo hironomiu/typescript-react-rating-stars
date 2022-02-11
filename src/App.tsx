@@ -3,7 +3,7 @@ import StarRating from './components/StarRating'
 import AddShopForm from './components/AddShopForm'
 
 const App = () => {
-  const { rating, handleClick, addShop } = useApp()
+  const { rating, handleClick, addShop, deleteShop } = useApp()
 
   return (
     <div style={{ padding: '10px' }}>
@@ -11,6 +11,7 @@ const App = () => {
       {rating.map((data, dataIndex) => (
         <div key={data.id}>
           <h1>{data.shopName}</h1>
+          <button onClick={() => deleteShop(data.id)}>削除</button>
           <StarRating
             size={5}
             rating={data.totalRating}
