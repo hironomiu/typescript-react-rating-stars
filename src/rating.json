@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "shopName": "ラーメン太郎",
+        "totalRating": 5,
+        "soupRating": 5,
+        "noodleRating": 4
+    },
+    {
+        "id": 2,
+        "shopName": "ラーメン花子",
+        "totalRating": 4,
+        "soupRating": 3,
+        "noodleRating": 4
+    },
+    {
+        "id": 3,
+        "shopName": "ラーメンJane",
+        "totalRating": 3,
+        "soupRating": 1,
+        "noodleRating": 4
+    },
+    {
+        "id": 4,
+        "shopName": "ラーメンJohn",
+        "totalRating": 1,
+        "soupRating": 2,
+        "noodleRating": 1
+    }
+]
