@@ -6,7 +6,7 @@ const App = () => {
   const { rating, handleClick, addShop } = useApp()
 
   return (
-    <>
+    <div style={{ padding: '10px' }}>
       <AddShopForm addShop={addShop} />
       {rating.map((data, dataIndex) => (
         <div key={data.id}>
@@ -28,7 +28,7 @@ const App = () => {
           />
         </div>
       ))}
-    </>
+    </div>
   )
 }
 
