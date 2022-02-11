@@ -1,11 +1,12 @@
 import StarRating from './components/StarRating'
 import { useApp } from './hooks/useApp'
-
+import AddShop from './components/AddShop'
 const App = () => {
-  const { rating, handleClick } = useApp()
+  const { rating, handleClick, addShop } = useApp()
 
   return (
     <>
+      <AddShop addShop={addShop} />
       {rating.map((data, dataIndex) => (
         <div key={data.id}>
           <h1>{data.shopName}</h1>

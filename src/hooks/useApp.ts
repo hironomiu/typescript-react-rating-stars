@@ -21,5 +21,20 @@ export const useApp = () => {
     }
     setRating(() => [...tmp])
   }
-  return { rating, setRating, handleClick }
+
+  const addShop = (shop: string) => {
+    const maxId = Math.max(...rating.map((rate) => rate.id))
+    setRating((prev) => [
+      ...prev,
+      {
+        id: maxId + 1,
+        shopName: shop,
+        totalRating: 0,
+        soupRating: 0,
+        noodleRating: 0,
+      },
+    ])
+  }
+
+  return { rating, setRating, handleClick, addShop }
 }
