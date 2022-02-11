@@ -1,6 +1,7 @@
 import { useApp } from './hooks/useApp'
 import StarRating from './components/StarRating'
 import AddShopForm from './components/AddShopForm'
+import DeleteShop from './components/DeleteShop'
 
 const App = () => {
   const { rating, handleClick, addShop, deleteShop } = useApp()
@@ -11,7 +12,7 @@ const App = () => {
       {rating.map((data, dataIndex) => (
         <div key={data.id}>
           <h1>{data.shopName}</h1>
-          <button onClick={() => deleteShop(data.id)}>削除</button>
+          <DeleteShop id={data.id} deleteShop={deleteShop} />
           <StarRating
             size={5}
             rating={data.totalRating}

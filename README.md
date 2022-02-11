@@ -1,5 +1,9 @@
 # typescript-react-rating-stars
 
+React(useState) を使ったレーティング（＋追加、削除）サンプル
+
+![demo](./demo.gif)
+
 ## Run
 
 ```
