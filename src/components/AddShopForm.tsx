@@ -9,6 +9,7 @@ const AddShopForm = memo(({ addShop }: { addShop: (name: string) => void }) => {
   return (
     <div>
       <input
+        style={{ height: '21px', marginRight: '5px' }}
         type="text"
         value={name}
         onChange={(e) => setName(e.target.value)}
