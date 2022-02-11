@@ -15,13 +15,13 @@ const StarRating = ({
         rating > index ? (
           <Star
             key={index}
-            style={'red'}
+            color={'red'}
             handleClick={() => handleClick(index)}
           />
         ) : (
           <Star
             key={index}
-            style={'grey'}
+            color={'grey'}
             handleClick={() => handleClick(index)}
           />
         )

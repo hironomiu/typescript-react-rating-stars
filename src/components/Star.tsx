@@ -1,15 +1,15 @@
 import { GoStar } from 'react-icons/go'
 
 const Star = ({
-  style,
+  color,
   handleClick,
 }: {
-  style: string
+  color: string
   handleClick: () => void
 }) => {
   return (
     <>
-      <GoStar style={{ color: style }} onClick={() => handleClick()} />
+      <GoStar style={{ color: color }} onClick={() => handleClick()} />
     </>
   )
 }
